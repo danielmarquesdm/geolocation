@@ -1,0 +1,25 @@
+header {
+  background-color: #007e7a;
+  padding: 2%;
+  color: #fff;
+}
+
+aside {
+  display: flex;
+  padding: 2%;
+  background: #007e7a;
+  max-width: 15%;
+  height: 650px;
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside ul li {
+  text-align: left;
+  padding: 20%;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #fff;
+}

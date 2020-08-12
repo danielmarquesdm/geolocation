@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
 import './Home.css';
+import api from '../services/api';
 
 class Home extends Component {
-  componentDidMount() {
+  state = {
+    employees: [],
+  };
+
+  async componentDidMount() {
     this.renderMap();
+    const response = await api.get('/employees');
+    this.setState({ employees: response.data });
+    console.log(this.state);
   }
 
   renderMap = () => {

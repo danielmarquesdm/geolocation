@@ -1,0 +1,41 @@
+header {
+  background-color: #fff;
+  color: #007e7a;
+  display: flex;
+}
+
+hr {
+  height: 1px;
+}
+
+header h1 {
+  font-weight: 100;
+  float: left;
+  align-self: center;
+  margin-left: 2%;
+}
+
+header .menu-top {
+  display: flex;
+  margin-left: 20%;
+}
+
+header .menu-top ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+header .menu-top ul li {
+  align-self: center;
+  padding: 10%;
+}
+
+#link {
+  text-decoration: none;
+  color: unset;
+}
+
+header .menu-top ul li:select {
+  border-bottom: 2px solid #007e7a;
+}

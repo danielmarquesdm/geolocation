@@ -1,0 +1,16 @@
+.climate-container {
+  display: flex;
+  max-width: 1380px;
+  margin: 0 auto;
+  margin-top: 3%;
+  justify-content: space-around;
+}
+
+#cardsClimate {
+  color: #fff;
+  height: 400px;
+  width: 600px;
+  border-radius: 4px;
+  font-size: 15px;
+  padding: 2%;
+}

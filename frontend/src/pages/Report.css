@@ -1,0 +1,26 @@
+.report-container {
+  margin-top: 3%;
+  color: #007e7a;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#gerar {
+  margin-left: 20%;
+}
+
+#selecionar {
+  margin-left: 10%;
+}
+
+.report-container h1 {
+  margin-top: 3%;
+}
+
+#gerar,
+#selecionar {
+  border: 2px solid #007e7a;
+  height: 400px;
+  width: 500px;
+  border-radius: 4px;
+}

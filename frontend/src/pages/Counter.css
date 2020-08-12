@@ -1,0 +1,31 @@
+.counter-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3%;
+  max-width: 1380px;
+  margin: 0 auto;
+  margin-top: 3%;
+  margin-left: 10%;
+}
+
+.counter-container img {
+  background: none;
+}
+
+#cards {
+  color: #fff;
+  height: 280px;
+  width: 280px;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 2%;
+}
+
+#cards h1 {
+  margin-top: 15%;
+}
+
+#cards div p {
+  font-size: 80px;
+  margin-top: 10%;
+}

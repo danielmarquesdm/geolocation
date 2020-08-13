@@ -23,7 +23,7 @@ class Home extends Component {
 
   renderMap = () => {
     loadScript(
-      'https://maps.googleapis.com/maps/api/js?key=AIzaSyCJq_W9lJN4NTNoQTXKoUuUxpW0QV8etKY&callback=initMap'
+      'https://maps.googleapis.com/maps/api/js?key=SUA_KEY&callback=initMap'
     );
     window.initMap = this.initMap;
     

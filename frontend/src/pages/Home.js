@@ -1,24 +1,32 @@
 import React, { Component } from 'react';
 import './Home.css';
 import api from '../services/api';
+//import { Tooltip } from '@material-ui/core';
+import markerIcon from '../assets/marker.png';
+import marker from '../assets/map-marker.png';
 
 class Home extends Component {
+  
   state = {
     employees: [],
+    
   };
-
+  
   async componentDidMount() {
     this.renderMap();
     const response = await api.get('/employees');
     this.setState({ employees: response.data });
     console.log(this.state);
+
+    
   }
 
   renderMap = () => {
     loadScript(
-      'https://maps.googleapis.com/maps/api/js?key=SUA_API_KEY_AQUI&callback=initMap'
+      'https://maps.googleapis.com/maps/api/js?key=AIzaSyCJq_W9lJN4NTNoQTXKoUuUxpW0QV8etKY&callback=initMap'
     );
     window.initMap = this.initMap;
+    
   };
 
   initMap = () => {
@@ -36,17 +44,22 @@ class Home extends Component {
       zoom: 16,
       mapTypeId: 'satellite',
     });
+    const {employees} = this.state
 
-    var markerJose = new window.google.maps.Marker({
+    console.log(employees)
+    let markerJose = new window.google.maps.Marker({
+      
       position: markerPositionJose,
       map: map,
-      title: 'José',
+      title: `Name: ${employees.length}\nFirm: ${'VALE/SA'}`,
+      icon:markerIcon
     });
 
-    var markerMaria = new window.google.maps.Marker({
+    let markerMaria = new window.google.maps.Marker({
       position: markerPositionMaria,
       map: map,
-      title: 'Maria',
+      title: 'maria',
+      icon:marker       
     });
 
     markerJose.setMap(map);
@@ -56,6 +69,7 @@ class Home extends Component {
   };
 
   render() {
+
     return (
       <>
         <div id="map"></div>
@@ -65,6 +79,8 @@ class Home extends Component {
 }
 
 function loadScript(url) {
+  
+  
   var index = window.document.getElementsByTagName('script')[0];
   var script = window.document.createElement('script');
   script.src = url;
